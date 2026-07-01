@@ -40,18 +40,18 @@ g++ -std=c++17 src/main.cpp src/functions.cpp -o app && ./app
 
 7. Chạy thử nghiệm tự động: Chức năng chạy kiểm thử tự động 5 test case cốt lõi để đánh giá độ ổn định của chương trình.
 
-##Test cases
+**Test cases**
 1. Chương trình tích hợp sẵn hệ thống kiểm thử tự động độc lập qua Menu số 7 với 5 kịch bản chính:
 
-Test Case 1 (Kiểm thử chèn dữ liệu): Thêm thành công các flashcard mẫu vào cây BST và kiểm tra các liên kết con trỏ nhánh left, right.
+	Test Case 1 (Kiểm thử chèn dữ liệu): Thêm thành công các flashcard mẫu vào cây BST và kiểm tra các liên kết con trỏ nhánh left, right.
 
-Test Case 2 (Kiểm thử cập nhật & Tìm kiếm): Chèn một từ trùng khóa để kiểm tra cơ chế ghi đè dữ liệu mới, sau đó dùng hàm tìm kiếm để xác thực tính chính xác của dữ liệu.
+	Test Case 2 (Kiểm thử cập nhật & Tìm kiếm): Chèn một từ trùng khóa để kiểm tra cơ chế ghi đè dữ liệu mới, sau đó dùng hàm tìm kiếm để xác thực tính chính xác của dữ liệu.
 
-Test Case 3 (Kiểm thử xóa dữ liệu): Tiến hành loại bỏ một từ vựng ra khỏi BST (bao gồm cả trường hợp nút cần xóa có 2 nút con) và kiểm tra lại để đảm bảo hàm tìm kiếm không còn thấy từ đó.
+	Test Case 3 (Kiểm thử xóa dữ liệu): Tiến hành loại bỏ một từ vựng ra khỏi BST (bao gồm cả trường hợp nút cần xóa có 2 nút con) và kiểm tra lại để đảm bảo hàm tìm kiếm không còn thấy từ đó.
 
-Test Case 4 (Kiểm thử cấu trúc Spaced Repetition): Nạp vào hàng đợi ưu tiên các từ có độ khó khác nhau, sau đó pop phần tử đầu tiên để kiểm tra xem từ có độ khó lớn nhất (sai nhiều nhất) có được đưa lên đầu hay không.
+	Test Case 4 (Kiểm thử cấu trúc Spaced Repetition): Nạp vào hàng đợi ưu tiên các từ có độ khó khác nhau, sau đó pop phần tử đầu tiên để kiểm tra xem từ có độ khó lớn nhất (sai nhiều nhất) có được đưa lên đầu hay không.
 
-Test Case 5 (Kiểm thử tính năng Undo): Nạp tuần tự các flashcard vào Stack, thực hiện lệnh pop để kiểm tra tính đúng đắn của cơ chế LIFO (phải lấy được phần tử vừa được đưa vào cuối cùng).
+	Test Case 5 (Kiểm thử tính năng Undo): Nạp tuần tự các flashcard vào Stack, thực hiện lệnh pop để kiểm tra tính đúng đắn của cơ chế LIFO (phải lấy được phần tử vừa được đưa vào cuối cùng).
 
 2. Cấu trúc file
 ```bash
