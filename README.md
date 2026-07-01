@@ -21,7 +21,7 @@
 ## Compile và chạy
 Yêu cầu trình biên dịch GCC hỗ trợ chuẩn tiêu chuẩn C++17. Mở Terminal tại thư mục dự án và chạy lệnh sau:
 
-```bash
+
 g++ -std=c++17 src/main.cpp src/functions.cpp -o app && ./app
 
 ##Chức năng
@@ -54,6 +54,7 @@ Test Case 4 (Kiểm thử cấu trúc Spaced Repetition): Nạp vào hàng đợ
 Test Case 5 (Kiểm thử tính năng Undo): Nạp tuần tự các flashcard vào Stack, thực hiện lệnh pop để kiểm tra tính đúng đắn của cơ chế LIFO (phải lấy được phần tử vừa được đưa vào cuối cùng).
 
 2. Cấu trúc file
+```bash
 src/
   main.cpp       — Menu giao diện CLI và điều khiển luồng chạy chính của ứng dụng
   structures.h   — Khai báo các struct (Flashcard, Node) và nguyên mẫu hàm của 4 cấu trúc dữ liệu
