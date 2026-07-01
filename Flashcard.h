@@ -4,7 +4,6 @@
 #include <string>
 #include <fstream>
 
-// Cấu trúc đối tượng Flashcard
 struct Flashcard {
     std::string word;
     std::string definition;
@@ -12,7 +11,7 @@ struct Flashcard {
     int difficulty = 0; 
 };
 
-// --- Cây tìm kiếm nhị phân (BST) ---
+// --- Binary Search Tree (BST) ---
 struct BSTNode {
     Flashcard data;
     BSTNode* left = nullptr;
@@ -23,8 +22,9 @@ void insertBST(BSTNode*& root, Flashcard card);
 BSTNode* searchBST(BSTNode* root, std::string word);
 BSTNode* findMin(BSTNode* root);
 BSTNode* deleteBST(BSTNode* root, std::string word, bool& success);
+void clearBST(BSTNode*& root);
 
-// --- Hàng đợi (Queue) dùng cho Phiên học ---
+// --- Queue ---
 struct QueueNode {
     Flashcard data;
     QueueNode* next = nullptr;
@@ -40,7 +40,7 @@ struct Queue {
     void clear();
 };
 
-// --- Ngăn xếp (Stack) dùng cho Undo ---
+// --- Stack ---
 struct StackNode {
     Flashcard data;
     StackNode* next = nullptr;
@@ -55,7 +55,7 @@ struct Stack {
     void clear();
 };
 
-// --- Hàng đợi ưu tiên (Priority Queue) ---
+// --- Priority Queue (Linked List dựa trên thuộc tính difficulty) ---
 struct PQNode {
     Flashcard data;
     PQNode* next = nullptr;
@@ -67,12 +67,14 @@ struct PriorityQueue {
     bool isEmpty();
     void push(Flashcard card);
     Flashcard pop();
+    void clear();
 };
 
-// --- Các hàm chức năng bổ trợ Hệ thống ---
+// --- Hệ thống quản lý và Tiện ích ---
 void saveInOrder(BSTNode* root, std::ofstream& file);
 void loadFromFile(BSTNode*& root, const std::string& filename);
 void populatePQFromBST(BSTNode* root, PriorityQueue& pq);
 void collectStats(BSTNode* root, int& total, int& wrongCount, Flashcard& mostForgotten);
+void runAutomatedTestCases(BSTNode*& dictionary);
 
 #endif
